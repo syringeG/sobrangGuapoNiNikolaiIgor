@@ -3,7 +3,24 @@
   <head>
     <title>hmmm?</title>
   </head>
-  <body>
+  <body onload="getLocation()">
     <img src="./skibiditoilet.jpeg">
+    <h1>hi? welcome to my site ig lol</h1>
+    <p>low quality asf pero pagtiyagaan niyo na lang</p>
+    <p id="demo"></p>
+    <script>
+      var x = document.getElementById("demo")
+      function getLocation() {
+        if (navigator.geolocation) {
+          navigator.geolocation.get(CurrentPosition(showPosition));
+        } else {
+          x.innerHTML = "Geolocation is not supported by this browser";
+        }
+      }
+      function showPosition(position) {
+        x.innerHTML = "Latitude: " + position.coords.latitude +
+        "<br>Longitude: " + positon.coords.longitude;
+      }
+    </script>
   </body>
 </html>
